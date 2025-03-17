@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background: linear-gradient(135deg,purple, #8BC6EC, #9599E2,pink,blue); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0; 
+}
+
+#container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.9); 
+}
+
+
+#age-in {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#date {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#button:hover {
+  background-color: #45a049;
+}
+
+#output-div {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.age-out {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: white;
+  min-width: 80px;
+}
+
+.line {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.age-out p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.age-out:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="age-in">
+            <input type="date" id="date" />
+            <button id="button">Calculate</button>
+        </div>
+        <div id="output-div">
+            <div class="age-out">
+                <span class="line" id="years">
+                    -
+                </span>
+                <p>
+                    Years
+                </p>
+            </div>
+            <div class="age-out">
+                <span class="line" id="months">
+                    -
+                </span>
+                <p>
+                    Months
+                </p>
+            </div>
+            <div class="age-out">
+                <span class="line" id="days">
+                    -
+                </span>
+                <p>
+                    Days
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
